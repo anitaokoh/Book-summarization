@@ -1,27 +1,18 @@
 from flask import Flask, render_template,request
-from flask_bootstrap import Bootstrap
+# from flask_bootstrap import Bootstrap
 import pandas as pd
-# from bokeh.plotting import figure
-# from bokeh.embed import components
+
 
 df = pd.read_csv('data/book1_df.csv')
 emotions = df['emotion_label'].values.tolist()
 chapters = df['chapter'].values.tolist()
 
-# def create_figure(x, y):
-#     p = figure(plot_width = 400, plot_height = 400)
-#     p.line(x, y,
-#         line_width = 2, color = "green")
-    # p.xaxis.axis_label = 'Chapters'
-    #
-	# # Set the y axis label
-	# p.yaxis.axis_label = 'Emotion'
-    # return p
+
 
 
 app = Flask(__name__)
-Bootstrap(app)
-app.run(debug=True)
+# Bootstrap(app)
+# app.run(debug=True)
 
 @app.route('/')
 def home():
@@ -31,16 +22,9 @@ def home():
 
 @app.route('/summary')
 def summary():
-#     print(dict(request.args))
+
     new = dict(request.args)
-    # print(list(new.keys())[0])
-    # choice = new['title']
-    # # chapter = new.get("chapter","1")
-    # new_df = df[df['chapter']==1]
-    # summary = new_df['summary_5'][0]
-    # chapter = new["chapter"]
-    # new_df = df[df['chapter']==int(chapter)]
-    # summary = new_df['summary_5'][0]
+ 
 
 
     if list(new.keys())[0] == 'title':
@@ -62,10 +46,5 @@ def summary():
     return render_template("summary.html", CHOICE=choice, CHAPTERS=CHAPTERS, SUBTITLE=sub_title, summary=summary, EMO=emo)
 
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
-# @app.route('/viz')
-# def visualization():
-#     plot = create_figure(emotions,chapters)
-#     script, div = components(plot)
-#     return render_template("viz.html", script=script, div=div)
+if __name__ == '__main__':
+    app.run(debug=True)
