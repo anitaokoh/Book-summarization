@@ -1,5 +1,5 @@
 from flask import Flask, render_template,request
-from flask_bootstrap import Bootstrap
+# from flask_bootstrap import Bootstrap
 import pandas as pd
 # from bokeh.plotting import figure
 # from bokeh.embed import components
@@ -20,8 +20,8 @@ chapters = df['chapter'].values.tolist()
 
 
 app = Flask(__name__)
-Bootstrap(app)
-app.run(debug=True)
+# Bootstrap(app)
+# app.run(debug=True)
 
 @app.route('/')
 def home():
@@ -61,6 +61,8 @@ def summary():
         emo = new_df['emotion_analysis_10'].values[0]
     return render_template("summary.html", CHOICE=choice, CHAPTERS=CHAPTERS, SUBTITLE=sub_title, summary=summary, EMO=emo)
 
+if __name__ == '__main__':
+    app.run(debug=True)
 # @app.route('/viz')
 # def visualization():
 #     plot = create_figure(emotions,chapters)
