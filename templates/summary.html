@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>summarization</title>
+  <link rel="stylesheet" href="static/summary.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-light" style="background-color: #233567;">
+    <div class="container">
+      <a class="navbar-brand" href="#"><span class="highlight">Snippets</span></a>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="/"><span class="two">Home</span></a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="/viz">Visualization</a>
+        </li> -->
+      </ul>
+    </div>
+
+  </nav>
+  <div class="container" id="texts">
+    <div class="my-4">
+      <!-- <h2 class='two'>Dig in</h2> -->
+
+      <h4><span class="two">{{CHOICE}}</span></h4>
+
+
+      <small class='highlight'>Please go through the summaries by chapter using the drop down menu below </small>
+      <br>
+      <br>
+      <form action= "/summary" method = "GET">
+        <select name="chapter">
+          <option selected ="selected" name= "chapter" value="1">Chapter 1</option>
+          <option value="2">Chapter 2</option>
+          <option value="3">Chapter 3</option>
+          <option value="4">Chapter 4</option>
+          <option value="5">Chapter 5</option>
+          <option value="6">Chapter 6</option>
+          <option value="7">Chapter 7</option>
+          <option value="8">Chapter 8</option>
+          <option value="9">Chapter 9</option>
+        </select>
+        <button type="submit" class="btn btn-primary btn-sm" id="btn">Search</button>
+      </form>
+      <br>
+      <input type="hidden" name="chapter" value="{{summary}}">
+      <h5 class='new'>{{CHAPTERS}}</h5>
+      <h7 class='new'>{{SUBTITLE}}</h7>
+      <p class="text-justify">{{summary}}</p>
+      <!-- <p>The emotion displayed more through out the chapter is {{EMO}}</p> -->
+      <!-- <div class="my-3 row justify-content-center">
+        <button class="btn btn-primary btn-sm" id="btn">Next</button>
+      </div> -->
+      <p class='new'>Dominant Emotion detected: <span id='emo'>{{EMO}}</span></p>
+    </div>
+  </div>
+
+
+  <!-- ?? starts-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- ?? ends-->
+</body>
+
+</html>

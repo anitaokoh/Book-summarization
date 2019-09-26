@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<!-- Head starts -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Snippet</title>
+  <link rel="stylesheet" href="static/main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<!-- Head ends -->
+
+<!-- body starts -->
+<body>
+
+  <!-- navigation bar starts -->
+  <nav id= "mynavbar" class="navbar navbar-light" style="background-color: #fbc1bc;">
+<div class="container">
+  <a class="navbar-brand" href="#">
+    <img src="static/logo.png" alt="Snippet" id="logo">
+  </a>
+  <ul id="navlinks"class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#texts">About</a>
+    </li>
+  </ul>
+</div>
+
+  </nav>
+<!-- navigation bar ends -->
+
+<!-- Intro display starts-->
+  <section class="main-splash">
+    <div>
+      <h1>Welcome to <span class="highlight">Snippets</span></h1>
+      <p class="one" style="text-align:center">Information Shortcuts using NLP</p>
+    </div>
+  </section>
+<!-- Intro display ends-->
+
+<!-- Second display starts-->
+  <div class="container" id="texts">
+    <div class="my-5">
+
+      <!-- Intro starts-->
+      <h3 class="two">Let's get started</h3>
+      <p>Snippets helps you summarize chapter by chapter <b>that awesome non-fictional book you have not had the time</b> to complete as well as discover emotions based on each chapter</p>
+
+<!-- Intro ends-->
+
+<!-- first instruction starts-->
+<p>We are currenly working on the real-time and DIY book summarization interface on Snippet.</p>
+<p> This means that if there are specific books you would like summarized and at your possession, fill this <a id="linkcolor" href='https://forms.gle/iRPmgnpfPBaK5bjQ8'>form</a> and we will send a notification when it has been summarized</p>
+      <h6 class="two">However,go ahead and explore our current book directory. Get their summaries and chapter emotion analysis in minutes  </h6>
+
+<!-- Option one starts-->
+<form class="form-inline" action="/summary" method="GET">
+  <select class="custom-select my-1 mr-sm-1" name="title" id="inlineFormCustomSelectPref">
+
+    <option selected>Choose a book </option>
+    <option value="{{BOOKS[0]}}">{{BOOKS[0]}}</option>
+    <option value="{{BOOKS[1]}}">{{BOOKS[1]}}</option>
+    <!-- <option value="{{BOOKS[2]}}">{{BOOKS[2]}}</option> -->
+  </select>
+  <button type="submit" class="btn btn-primary" id="btn">Submit</button>
+</form>
+<!-- Option one ends-->
+
+    </div>
+    </div>
+<!-- Second display starts-->
+<footer id="footer">
+  <p>Copyright © Anita Okoh</p>
+</footer>
+
+<!-- ?? starts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- ?? ends-->
+
+</body>
+<!-- body ends -->
+</html>
