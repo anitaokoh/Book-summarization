@@ -31,7 +31,7 @@ def home():
 
 @app.route('/summary')
 def summary():
-    print(dict(request.args))
+#     print(dict(request.args))
     new = dict(request.args)
     # print(list(new.keys())[0])
     # choice = new['title']
