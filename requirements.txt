@@ -1,4 +1,0 @@
-Flask==1.1.1
-Flask-Bootstrap==3.3.7.1
-pandas==0.23.4
-Frozen-Flask==0.15
