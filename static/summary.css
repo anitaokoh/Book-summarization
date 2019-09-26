@@ -1,0 +1,29 @@
+.navbar {
+  min-height: 20px;
+  color: #fbc1bc;
+}
+
+
+.highlight {
+  color: #fbc1bc;
+}
+
+.two{
+ color: #315b96;
+}
+
+.new{
+  color: #315b96;
+}
+#btn {
+  margin-left: 20px;
+}
+
+#analysis {
+  background-color: #fbc1bc;
+
+}
+#emo {
+  color: #315b96
+  font-weight: bolder;
+}

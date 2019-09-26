@@ -1,0 +1,57 @@
+.navbar {
+  min-height: 20px;
+}
+
+#logo {
+  height: 33px;
+}
+#mynavbar {
+  padding: 4px 8px;
+}
+#navlinks li a {
+  color: #233567;
+}
+
+#linkcolor {
+  color: #fbc1bc;
+}
+
+.main-splash {
+  background-color: #233567;
+  min-height: 100vh;
+  color: #FFFFFF;
+  DISPLAY: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.highlight {
+  color: #fbc1bc;
+}
+
+.one{
+ color: #ffdfdf;
+}
+
+.two{
+ color: #315b96;
+}
+
+#btn{
+  background-color: #fbc1bc;
+  color: #233567;
+  border-color: #fbc1bc;
+}
+
+#footer {
+  display: block;
+  background-color: #233567;
+  color: #fbc1bc;
+
+
+}
+#footer p {
+margin: 0;
+text-align: center; 
+}
