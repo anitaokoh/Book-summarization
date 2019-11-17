@@ -6,6 +6,8 @@ For my final project, I attempted to summarize a book using the extractive summa
 I combined all this and wrapped them in a flask framework, building a web app with the help of HTML and CSS.
 
 **Here is a demo of the web app**
+
+
 ![](https://github.com/anitaokoh/text_summarization/blob/master/ezgif.com-video-to-gif%20(2).gif)
 
 
