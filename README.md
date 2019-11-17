@@ -8,7 +8,7 @@ I combined all this and wrapped them in a flask framework, building a web app wi
 **Here is a demo of the web app**
 
 
-![](https://github.com/anitaokoh/text_summarization/blob/master/ezgif.com-video-to-gif%20(2).gif)
+![](https://github.com/anitaokoh/Book-summarization/blob/master/summaryvideo.gif)
 
 
 _Further improvements will be done on the project like adding more books to the directory and making it more dynamic_
